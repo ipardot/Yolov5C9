@@ -11,6 +11,73 @@ st.set_page_config(
     layout="wide"
 )
 
+st.markdown("""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@600;800&display=swap');
+
+.stApp {
+    background-color: #060B10;
+    background-image:
+        linear-gradient(rgba(0,255,209,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,209,0.06) 1px, transparent 1px),
+        radial-gradient(ellipse at center, rgba(0,255,209,0.05) 0%, transparent 70%);
+    background-size: 28px 28px, 28px 28px, 100% 100%;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif !important;
+    color: #00FFD1 !important;
+    text-shadow: 0 0 8px rgba(0,255,209,0.5);
+    letter-spacing: 0.04em;
+}
+
+p, li, label, div[data-testid="stMarkdownContainer"], .stMarkdown, .stCaption {
+    font-family: 'Share Tech Mono', monospace !important;
+    color: #B8F5EA !important;
+}
+
+section[data-testid="stSidebar"] {
+    background-color: #050A0E;
+    border-right: 2px solid #00FFD1;
+    box-shadow: inset -8px 0 20px -12px rgba(0,255,209,0.3);
+}
+
+div[data-testid="stSlider"] label, div[data-testid="stNumberInput"] label {
+    font-family: 'Share Tech Mono', monospace !important;
+    color: #00FFD1 !important;
+}
+
+div[data-testid="stSlider"] div[role="slider"] {
+    background-color: #00FFD1 !important;
+    box-shadow: 0 0 6px #00FFD1;
+}
+
+div[data-testid="stCameraInput"], div[data-testid="stImage"] {
+    border: 2px solid #00FFD1;
+    box-shadow: 0 0 14px rgba(0,255,209,0.35), inset 0 0 14px rgba(0,255,209,0.08);
+    padding: 6px;
+    position: relative;
+}
+
+div[data-testid="stDataFrameResizable"], div[data-testid="stDataFrame"] {
+    border: 1.5px solid #00FFD1 !important;
+    box-shadow: 0 0 10px rgba(0,255,209,0.25);
+}
+
+div[data-testid="stAlert"] {
+    font-family: 'Share Tech Mono', monospace !important;
+    background-color: #0A1418 !important;
+    border-left: 4px solid #00FFD1 !important;
+    color: #B8F5EA !important;
+}
+
+hr {
+    border-color: #00FFD1 !important;
+    opacity: 0.4;
+}
+</style>
+""", unsafe_allow_html=True)
+
 @st.cache_resource
 def load_model():
     try:
